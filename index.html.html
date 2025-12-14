@@ -1,0 +1,353 @@
+  
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Báo Tường Tri Ân Thầy Cô – Nhóm 1 | 12A4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+  --bg1:#b3dcff;      /* xanh da trời nhạt */
+  --bg2:#c9f7e1;      /* xanh lá non */
+  --card:#ffffff;
+  --primary:#2563eb;  /* xanh đậm vừa */
+  --accent:#22c55e;   /* xanh lá */
+  --text:#1f2937;
+  --muted:#4b5563;
+  --radius:18px;
+  --shadow:0 20px 40px rgba(37,99,235,.18);
+}
+
+    *{box-sizing:border-box}
+    body{
+  margin:0;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  color:var(--text);
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter: blur(8px);
+      background:rgba(255,255,255,.7); border-bottom:1px solid #e5e7eb;
+    }
+    .nav{ 
+      max-width:1100px; margin:auto; padding:14px 18px; display:flex; align-items:center; justify-content:space-between;
+    }
+    .logo{font-weight:700; letter-spacing:.3px}
+    .logo span{color:var(--primary)}
+    .nav a{color:var(--muted); text-decoration:none; margin-left:16px; font-weight:600}
+    .nav a:hover{color:var(--primary)}
+
+    .hero{
+      max-width:1100px; margin:32px auto 0; padding:42px 18px; display:grid; grid-template-columns:1.2fr .8fr; gap:28px;
+    }
+    .hero-card{
+      background:radial-gradient(120% 120% at 0% 0%, #ffffff, #f3f6ff);
+      border-radius:var(--radius); box-shadow:var(--shadow); padding:36px;
+      animation:fadeUp .8s ease both;
+    }
+    .badge{display:inline-block; background:#e8efff; color:#1e40af; padding:6px 10px; border-radius:999px; font-weight:700; font-size:12px}
+    h1{
+      font-family:'Playfair Display', serif; font-size:42px; margin:14px 0 10px;
+    }
+    .subtitle{color:var(--muted); font-size:16px}
+    .cta{margin-top:18px; display:inline-block; background:var(--primary); color:#fff; padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:700}
+    .cta:hover{filter:brightness(.95)}
+
+    .hero-img{
+      background:linear-gradient(135deg,#dbe7ff,#fff); border-radius:var(--radius); box-shadow:var(--shadow);
+      display:flex; align-items:center; justify-content:center; padding:14px;
+    }
+    .hero-img img{max-width:100%; border-radius:14px}
+    .note{font-size:12px; color:var(--muted); margin-top:8px}
+
+    section{max-width:1100px; margin:0 auto; padding:28px 18px} 
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+    .card{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px}
+    h2{font-family:'Playfair Display', serif; font-size:28px; margin:0 0 10px}
+    p{line-height:1.7}
+
+    .quote{
+      border-left:4px solid var(--accent); padding-left:14px; font-style:italic; color:#374151; background:#fffaf0; border-radius:12px; padding:18px
+    }
+
+    .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .gallery img{width:100%; border-radius:14px; box-shadow:0 10px 20px rgba(0,0,0,.1)}
+
+    footer{
+      margin-top:36px; background:#0f172a; color:#cbd5f5;
+    }
+    .foot{max-width:1100px; margin:auto; padding:24px 18px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between}
+    .foot strong{color:#fff}
+
+    @keyframes fadeUp{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 520px){
+      h1{font-size:34px}
+      .gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">BÁO TƯỜNG <span>TRI ÂN</span></div>
+      <nav>
+       <a href="#gioithieu">Giới thiệu</a>
+       <a href="#noidung">Nội dung</a>
+       <a href="#amnhac">Âm nhạc</a>
+       <a href="#hinhanh">Hình ảnh & Video</a>
+       <a href="#loitrian">Bình luận</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <span class="badge">NHÓM 1 • LỚP 12A4</span>
+        <h1>Tri Ân Thầy Cô</h1>
+        <p class="subtitle">Trường THPT Số 1 Phù Cát — Nơi ươm mầm tri thức, chắp cánh ước mơ.</p>
+        <a class="cta" href="#noidung">Xem nội dung</a>
+      </div>
+      <div class="hero-img">
+        <!-- Thay src bằng ảnh của nhóm (ví dụ: anh1.jpg) -->
+        <div>
+          <img src="482221477_122217251468036398_4468692744137577607_n.jpg" alt="Khoảnh khắc học tập trang trọng" />
+          <div class="note">Bắt gặp hình ảnh cô Hương bị các anh bộ đội bao vây </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gioithieu">
+      <div class="grid">
+        <div class="card">
+          <h2>Giới thiệu</h2>
+          <p>Thầy cô là những người lặng lẽ gieo mầm tri thức, âm thầm nâng đỡ những ước mơ non trẻ. Dưới mái trường THPT Số 1 Phù Cát, chúng em đã được học tập, rèn luyện và trưởng thành từng ngày nhờ sự tận tâm và yêu thương của thầy cô.</p>
+        </div>
+        <div class="card quote">
+          “Dẫu mai này mỗi người một hướng đi, chúng em vẫn luôn nhớ về thầy cô — những người đã thắp sáng ước mơ và cho chúng em hành trang vững bước vào đời.”
+        </div>
+      </div>
+    </section>
+
+    <section id="noidung">
+      <div class="card">
+        <h2>Nội dung tri ân</h2>
+        <p>Nhân dịp tri ân thầy cô, <strong>Nhóm 1 – lớp 12A4 – Trường THPT Số 1 Phù Cát</strong> xin được bày tỏ lòng biết ơn sâu sắc nhất tới quý thầy cô – những người đã dành trọn tâm huyết, trí tuệ và cả tình yêu thương để dìu dắt chúng em trong suốt những năm tháng học tập dưới mái trường thân yêu này.</p>
+        <p>Ba năm học THPT trôi qua không quá dài nhưng đủ để in đậm trong tâm trí chúng em hình ảnh những tiết học nghiêm túc, những bài giảng tận tình, những lần thầy cô kiên nhẫn giảng lại cho chúng em hiểu từng kiến thức nhỏ. Có những lúc chúng em còn bồng bột, chưa ý thức hết trách nhiệm của bản thân, nhưng thầy cô vẫn luôn bao dung, nhắc nhở bằng sự nghiêm khắc xen lẫn yêu thương.</p>
+        <p>Không chỉ truyền đạt tri thức, thầy cô còn dạy chúng em cách làm người, biết sống nhân ái, biết tôn trọng kỷ luật, biết ước mơ và không ngừng phấn đấu cho tương lai. Những bài học ấy không nằm trọn trong sách vở mà sẽ theo chúng em suốt cả cuộc đời.</p>
+        <p>Nhìn lại chặng đường đã qua, chúng em càng thấu hiểu rằng mỗi thành công nhỏ bé hôm nay đều có bóng dáng của thầy cô phía sau. Chính sự tận tụy thầm lặng ấy đã trở thành động lực để chúng em vững tin bước tiếp trên con đường phía trước.</p>
+         </div>
+    </section>
+
+    <section id="amnhac">
+      
+        <audio id="bg-music" loop>
+         <source src="vietnam.mp3" type="audio/mpeg">
+        </audio>
+
+        <script>
+          document.addEventListener("click", function () {
+            const music = document.getElementById("bg-music");
+            music.play();
+          }, { once: true });
+        </script>
+
+      
+    </section>
+
+    <section id="hinhanh">
+      <div class="card">
+        <h2>Hoạt động tập thể lớp 12A4 </h2>
+        <p>Những hình ảnh dưới đây ghi lại các khoảnh khắc học tập và sinh hoạt quen thuộc – nơi thầy và trò cùng nhau lắng nghe, trao đổi và sẻ chia tri thức. Đó là những khoảnh khắc bình dị nhưng vô cùng đáng quý, thể hiện sự gắn bó và tinh thần trách nhiệm trong môi trường học đường.</p>
+        <div class="gallery">
+          <img src="473027681_122207741216036398_5897449431465969940_n (1).jpg" alt="Khoảnh khắc học tập" />
+          <img src="476337372_122211312008036398_2069093724952877375_n.jpg" alt="Không gian lớp học" />
+          <img src="476086456_122211316778036398_3833249660965067719_n.jpg" alt="Hoạt động tập thể" />
+        </div>
+      </div>
+    </section>
+
+    <section id="video">
+      <div class="card">
+        <h2>Video tri ân</h2>
+        <p>Video là món quà tinh thần mà tập thể <strong>Nhóm 1 Tổ 1 – lớp 12A4</strong> muốn gửi đến thầy cô như một lời cảm ơn chân thành. Qua từng thước phim, chúng em mong có thể lưu giữ lại những kỷ niệm đẹp của quãng đời học sinh – nơi có thầy cô, bạn bè và biết bao cảm xúc không thể nào quên.</p>
+    
+    <div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        
+        <video controls style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" poster="thumbnail.jpg">
+            <source src="gieomamxanh.mp4" type="video/mp4">
+        </video>
+        </div>
+</section>
+   </div>
+      </div>
+    </section>
+
+    <section id="loitrian">
+      <div class="card">
+            <h2>💬 Góc bình luận</h2>
+            <form>
+                <label>Họ và tên:</label><br>
+                <input type="text"><br><br>
+
+                <label>Nội dung:</label><br>
+                <textarea rows="4"></textarea><br><br>
+
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+    </main>
+
+   <footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-left">
+      <h3>🌸 Lời tri ân</h3>
+      <p>
+        Kính chúc thầy cô luôn mạnh khỏe, hạnh phúc và tiếp tục là ngọn đèn
+        soi sáng cho bao thế hệ học sinh thân yêu.
+      </p>
+
+      <p><strong>Nhóm 1 – Lớp 12A4 – Trường THPT Số 1 Phù Cát</strong></p>
+
+      <p>
+        📧 Email: nhom1_12a4@gmail.com <br>
+        🗓️ Cập nhật: 14/12/2025
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h3>👥 Thành viên nhóm</h3>
+      <ul>
+        <li>Hồ Hoàng Phát</li>
+        <li>Huỳnh Ngọc Gia Lợi</li>
+        <li>Nguyễn Đăng Trường</li>
+        <li>Hà Nguyễn Gia Hân</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    Bài như này phải 10 điểm mới đủ • Báo tường Tri Ân Thầy Cô
+  </div>
+</footer>
+
+  <!-- ❄️ Snow Effect - No Light -->
+<style>
+  .footer{
+  background: linear-gradient(
+    135deg,
+    #fbcfe8,   /* hồng nhạt */
+    #e9d5ff    /* tím pastel */
+  );
+  color:#3b0764;
+  margin-top:50px;
+  border-top:4px solid rgba(88,28,135,.25);
+}
+
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 18px;
+  display:grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap:36px;
+}
+
+.footer h3{
+  margin-top:0;
+  font-family:'Playfair Display', serif;
+}
+
+.footer-bottom{
+  background: rgba(88,28,135,.15);
+  text-align:center;
+  padding:14px;
+  font-size:14px;
+}
+
+  .snowflake {
+    position: fixed;
+    top: -10px;
+    color: #fff;
+    user-select: none;
+    pointer-events: none;
+    z-index: 9999;
+    animation-name: fall, sway;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(110vh);
+    }
+  }
+
+  @keyframes sway {
+    0% { margin-left: 0; }
+    50% { margin-left: 30px; }
+    100% { margin-left: 0; }
+  }
+
+  .toggle-snow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+  }
+</style>
+
+<button class="toggle-snow">❄️ Tắt tuyết</button>
+
+<script>
+  let snowing = true;
+  const snowflakes = [];
+  const symbols = ["❄", "✻", "❅", "❆"]; // KHÔNG CÓ ÁNH SÁNG
+
+  function createSnow() {
+    for (let i = 0; i < 40; i++) {
+      const snow = document.createElement("div");
+      snow.className = "snowflake";
+      snow.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+
+      snow.style.left = Math.random() * 100 + "vw";
+      snow.style.fontSize = 12 + Math.random() * 20 + "px";
+      snow.style.opacity = 0.6 + Math.random() * 0.4;
+      snow.style.animationDuration =
+        6 + Math.random() * 6 + "s, " + (3 + Math.random() * 3) + "s";
+
+      document.body.appendChild(snow);
+      snowflakes.push(snow);
+    }
+  }
+
+  createSnow();
+
+  document.querySelector(".toggle-snow").onclick = function () {
+    snowing = !snowing;
+    snowflakes.forEach(s => s.style.display = snowing ? "block" : "none");
+    this.innerText = snowing ? "❄️ Tắt tuyết" : "☃️ Bật tuyết";
+  };
+</script>
+
+</body>
+</html>
